@@ -1,0 +1,27 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Wait 3 Seconds";
+    Text = "Please Wait 3 Seconds";
+})
+
+wait(3)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Anwarun Gui Loaded!";
+    Text = "Gui Made By santa ";
+})
+
+
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BackgroundTransparency = 1
+Frame.Size = UDim2.new(0, 100, 0, 100)
+game.ReplicatedStorage.PlayerData[game.Players.LocalPlayer.UserId].BoomBox.Value = true
